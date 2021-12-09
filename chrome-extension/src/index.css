@@ -1,0 +1,8 @@
+@import "./extension.css";
+
+/** Popup Size **/
+html,
+body {
+  width: 100%;
+  min-width: 300px;
+}

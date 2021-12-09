@@ -1,0 +1,30 @@
+{
+  "name": "Crypto Safety App",
+  "description": "Stay safe out there.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Open the popup",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "permissions": ["activeTab", "tabs", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.bundle.js"],
+      "all_frames": true
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "background": {
+    "service_worker": "background.bundle.js"
+  }
+}
